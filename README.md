@@ -1,17 +1,25 @@
 # 🖱️ Mouse Jiggler Pro
 
+
 <div align="center">
 
-![Mouse Jiggler Pro - Ana Ekran](screenshots/screenshot.png)
-![Mouse Jiggler Pro - Ayarlar](screenshots/screenshot2.png)
-
-**Windows için modern ve gelişmiş Mouse Jiggler uygulaması**
+<strong>Windows için modern ve gelişmiş Mouse Jiggler uygulaması</strong>
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Python](https://img.shields.io/badge/Python-3.8+-yellow.svg)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 
 </div>
+
+---
+
+### 🖼️ Ana Ekran
+![Ana Ekran](screenshots/screenshot.png)
+
+### ⚙️ Ayarlar Ekranı
+![Ayarlar Ekranı](screenshots/screenshot2.png)
+
+---
 
 ---
 
@@ -193,14 +201,8 @@ Bu proje **GNU Genel Kamu Lisansı v3.0** altında lisanslanmıştır. Detaylar 
 
 ---
 
-## ⭐ Destek
-
-Bu projeyi beğendiyseniz, ⭐ vermeyi unutmayın!
-
----
-
 <div align="center">
 
-**Made with ❤️ by Eren Kekiç**
+**Made by Eren Kekiç**
 
 </div>
