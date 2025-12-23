@@ -177,18 +177,6 @@ pip install pystray pillow
 
 ---
 
-## 🤝 Katkıda Bulunma
-
-Katkılarınızı bekliyoruz! Lütfen:
-
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/yeni-ozellik`)
-3. Commit yapın (`git commit -m 'Yeni özellik eklendi'`)
-4. Push yapın (`git push origin feature/yeni-ozellik`)
-5. Pull Request açın
-
----
-
 ## 📄 Lisans
 
 Bu proje **GNU Genel Kamu Lisansı v3.0** altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
