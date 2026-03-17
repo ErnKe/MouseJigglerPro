@@ -10,3 +10,9 @@ Pillow>=10.0.0
 
 # Opsiyonel - Klavye kısayolu (F9) için
 keyboard>=0.13.5
+
+# Opsiyonel - Teams process tespiti için
+psutil>=5.9.0
+
+# Opsiyonel - Teams sekme geçişi ve cross-platform mouse kontrolü
+pyautogui>=0.9.54

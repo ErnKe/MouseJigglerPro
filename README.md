@@ -1,25 +1,10 @@
 # 🖱️ Mouse Jiggler Pro
 
-
-<div align="center">
-
-<strong>Windows için modern ve gelişmiş Mouse Jiggler uygulaması</strong>
+**Windows için modern ve gelişmiş Mouse Jiggler uygulaması — Teams desteği ile!**
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Python](https://img.shields.io/badge/Python-3.8+-yellow.svg)](https://www.python.org/)
 [![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
-
-</div>
-
----
-
-### 🖼️ Ana Ekran
-![Ana Ekran](screenshots/screenshot.png)
-
-### ⚙️ Ayarlar Ekranı
-![Ayarlar Ekranı](screenshots/screenshot2.png)
-
----
 
 ---
 
@@ -27,17 +12,25 @@
 
 Mouse Jiggler Pro, bilgisayarınızın uyku moduna geçmesini veya ekran koruyucunun aktif olmasını engellemek için farenizi otomatik olarak hareket ettiren modern bir Windows uygulamasıdır.
 
-### ✨ Özellikler
+> **Not:** Teams tespiti ve multi-monitor özellikleri şu an sadece Windows'ta desteklenmektedir. Mac/Linux'ta temel mouse jiggler özelliği pyautogui ile çalışır.
+
+**v2.0** ile birlikte **Microsoft Teams entegrasyonu** eklendi — Teams uygulamanızı otomatik tespit eder, doğru monitöre odaklanır ve aktif durumunuzu korur.
+
+## ✨ Özellikler
 
 | Özellik | Açıklama |
 |---------|----------|
 | 🎨 **Modern Arayüz** | CustomTkinter ile karanlık tema |
 | 🔄 **3 Hareket Deseni** | Rastgele, Dairesel, Kare |
-| ⏱️ **Zamanlama Seçenekleri** | Otomatik durdurma, gecikmeli başlatma, zamanlanmış çalışma |
+| 🟢 **Teams Modu** | Microsoft Teams'e özel hareket motoru |
+| 🔍 **Teams Tespiti** | Masaüstü ve browser Teams otomatik algılama |
+| 🖥️ **Multi-Monitor** | Çoklu monitör desteği, Teams otomatik takip |
+| ⏱️ **Esnek Zamanlama** | Otomatik durdurma, gecikmeli başlatma, zamanlanmış çalışma |
 | ⏸️ **Akıllı Duraklatma** | Kullanıcı mouse'u hareket ettirince otomatik duraklatma |
-| 🗕 **Mini Mod** | Kompakt görünüm |
-| 📥 **System Tray** | Arka planda çalışma |
-| ⌨️ **Klavye Kısayolu** | F9 ile hızlı başlat/durdur |
+| 🔔 **Bildirimler** | Teams kapanma/açılma bildirimleri |
+| 🗕 **Mini Mod** | Kompakt görünüm (normal + Teams modu desteği) |
+| 📥 **System Tray** | Arka planda çalışma + Teams kontrolü |
+| ⌨️ **Klavye Kısayolları** | F9 normal mod, F10 Teams modu |
 | 💾 **Ayar Kaydetme** | Tüm ayarlar otomatik kaydedilir |
 
 ---
@@ -48,78 +41,77 @@ Mouse Jiggler Pro, bilgisayarınızın uyku moduna geçmesini veya ekran koruyuc
 
 1. **Python 3.8+** yüklü olmalıdır ([Python İndir](https://www.python.org/downloads/))
    > Kurulum sırasında **"Add Python to PATH"** seçeneğini işaretleyin!
-
 2. Projeyi indirin veya klonlayın:
-   ```bash
-   git clone https://github.com/ErnKe/mouse-jiggler-pro.git
    ```
-
-3. `run.bat` dosyasına çift tıklayın - **Hepsi bu kadar!**
+   git clone https://github.com/ErnKe/MouseJigglerPro.git
+   ```
+3. `run.bat` dosyasına çift tıklayın — **Hepsi bu kadar!**
    > İlk çalıştırmada gerekli kütüphaneler otomatik yüklenir.
 
 ### Yöntem 2: Manuel Kurulum
 
-1. Projeyi indirin
-2. Gerekli kütüphaneleri yükleyin:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Uygulamayı başlatın:
-   ```bash
-   python mouse_jiggler.py
-   ```
+```bash
+pip install -r requirements.txt
+python mouse_jiggler.py
+```
 
 ---
 
 ## 📦 Gereksinimler
 
 ### Zorunlu
-- **Python 3.8+**
-- **customtkinter** - Modern UI framework
+* **Python 3.8+**
+* **customtkinter** — Modern UI framework
 
 ### Opsiyonel (Ekstra özellikler için)
-- **pystray** + **Pillow** - System tray desteği
-- **keyboard** - F9 klavye kısayolu
-
-Tüm bağımlılıklar `requirements.txt` dosyasında listelenmiştir.
+* **psutil** — Teams process tespiti
+* **pystray** + **Pillow** — System tray desteği
+* **keyboard** — Klavye kısayolları (F9/F10)
+* **pyautogui** — Teams sekme geçişi ve cross-platform mouse kontrolü
 
 ---
 
 ## 🎮 Kullanım
 
 ### Temel Kullanım
-
 1. **BAŞLAT** butonuna tıklayın veya **F9** tuşuna basın
 2. Mouse otomatik olarak hareket etmeye başlayacak
 3. Durdurmak için **DURDUR** veya tekrar **F9**
 
-### Ayarlar
+### 🟢 Teams Modu
 
-⚙️ **Ayarlar** butonuna tıklayarak şunları özelleştirebilirsiniz:
+1. Ana ekrandaki **Teams Modu** butonuna tıklayın
+2. Teams otomatik ve canlı olarak tespit edilir (3 saniyede bir taranır)
+3. **TEAMS BAŞLAT** butonuna basın — türünü seçin:
+   - **🌐 Browser Teams** — Chrome/Edge'deki Teams
+   - **🖥️ Masaüstü Teams** — Windows Teams uygulaması
+4. Seçiminize göre Teams otomatik açılır ve mouse hareketi başlar
+5. Teams penceresi kapanırsa bildirim alırsınız
+6. **F9** ile hızlıca başlatın (Teams sayfasındayken Teams modu, diğer sayfalarda normal mod)
 
-#### 🎛️ Hareket Ayarları
-- **Hız**: Hareket sıklığını ayarlayın (yavaş ↔ hızlı)
-- **Mesafe**: Hareket mesafesini ayarlayın (küçük ↔ büyük)
+**Teams Ayarları:**
+- **Varsayılan Tarayıcı**: Otomatik, Chrome, Edge, Firefox, Brave veya Opera
+- **Hareket Aralığı**: Sürekli, 10sn, 30sn, 1dk, 5dk, 10dk, 20dk, 30dk veya özel
+- **Hareket Tipi**: Minimal (1-3px), Küçük (3-8px), Orta (8-15px)
+- **Otomatik Çekme**: Mouse Teams dışına çıkarsa geri çeker
+- **Pencere Takibi**: Teams pencere değişikliklerini izler
+- **Bildirimler**: Teams kapanma/açılma bildirimleri
+
+### Ayarlar (Normal Mod)
+⚙️ **Ayarlar** butonuna tıklayarak özelleştirebilirsiniz:
+- **Hız & Mesafe**: Hareket sıklığı ve mesafesi
 - **Desen**: Rastgele, Dairesel veya Kare
-
-#### ⏰ Zamanlama
-- **Otomatik Durdurma**: Belirli bir süre sonra otomatik durdurma
-- **Gecikmeli Başlatma**: Belirli bir süre sonra başlama
-- **Zamanlanmış Çalışma**: Belirli saatler arasında otomatik çalışma
-
-#### ⚡ Akıllı Özellikler
-- **Kullanıcı Algılama**: Mouse'unuzu hareket ettirdiğinizde otomatik duraklatma
-- **Her Zaman Üstte**: Pencereyi her zaman üstte tutma
+- **Zamanlama**: Otomatik durdurma, gecikmeli başlatma, zamanlanmış çalışma
+- **Akıllı Özellikler**: Kullanıcı algılama, her zaman üstte
 
 ### Mini Mod
-
-🗕 **Mini** butonuyla kompakt moda geçin - sadece başlat/durdur butonu ve durum göstergesi.
+🗕 **Mini** butonuyla kompakt moda geçin — normal ve Teams modu için çalışır.
 
 ### System Tray
-
-📥 **Tepsi** butonuyla uygulamayı sistem tepsisine küçültün. Sağ tıklayarak:
+📥 **Tepsi** butonuyla sistem tepsisine küçültün. Sağ tıklayarak:
 - Göster
-- Başlat/Durdur
+- Başlat/Durdur (Normal)
+- Teams Başlat/Durdur
 - Çıkış
 
 ---
@@ -128,24 +120,22 @@ Tüm bağımlılıklar `requirements.txt` dosyasında listelenmiştir.
 
 | Kısayol | İşlev |
 |---------|-------|
-| **F9** | Başlat / Durdur |
-
-> Not: Klavye kısayolu için `keyboard` kütüphanesi gereklidir.
+| **F9** | Akıllı Başlat / Durdur — normal sayfada normal mod, Teams sayfasında Teams modu |
 
 ---
 
 ## 📁 Dosya Yapısı
 
 ```
-mouse-jiggler-pro/
+MouseJigglerPro/
 ├── mouse_jiggler.py      # Ana uygulama
 ├── requirements.txt      # Python bağımlılıkları
-├── run.bat               # Başlatma scripti
 ├── run.bat               # Başlatma scripti
 ├── README.md             # Bu dosya
 ├── LICENSE               # GPL-3.0 Lisansı
 └── screenshots/          # Ekran görüntüleri
-    └── screenshot.png
+    ├── screenshot.png
+    └── screenshot2.png
 ```
 
 ---
@@ -165,13 +155,37 @@ Ayarlarınız otomatik olarak şu konumda saklanır:
 - Python'un yüklü olduğundan emin olun
 - Python'u PATH'e eklediğinizden emin olun
 
-### Klavye kısayolu çalışmıyor
-```bash
+### Teams tespit edilemiyor (masaüstü)
+- Teams'in açık olduğundan emin olun
+- `pip install psutil` ile process tespitini aktifleştirin
+- Uygulama içi "Yeniden Tara" butonunu deneyin
+
+### Teams tespit edilemiyor (browser)
+- Teams'in browser'da **açık bir sekmede** olduğundan emin olun
+- Edge veya Chrome kullanıyorsanız Teams sekmesi arka planda olabilir — sorun değil, tespit edilir
+- "Yeniden Tara" butonunu deneyin
+- psutil yüklü ise tespit daha güvenilir olur: `pip install psutil`
+
+### Teams farklı sekmede iken tespit edilemiyor
+- "Yeniden Tara" butonuna tıklayın — browser otomatik öne getirilir
+- Teams sekmesine geçin ve tekrar "Yeniden Tara" yapın
+- psutil yüklüyse browser process'i otomatik tespit edilir
+
+### Klavye kısayolları çalışmıyor
+```
 pip install keyboard
 ```
 
+### Teams sekmesine otomatik geçiş çalışmıyor
+```
+pip install pyautogui
+```
+- pyautogui yüklüyse: Ctrl+L + URL yöntemiyle Teams sekmesi açılır
+- pyautogui yüklü değilse: browser doğrudan çalıştırılarak Teams açılır
+- Chrome veya Edge kullanmanız önerilir
+
 ### System tray çalışmıyor
-```bash
+```
 pip install pystray pillow
 ```
 
@@ -189,8 +203,4 @@ Bu proje **GNU Genel Kamu Lisansı v3.0** altında lisanslanmıştır. Detaylar 
 
 ---
 
-<div align="center">
-
 **Made by Eren Kekiç**
-
-</div>
