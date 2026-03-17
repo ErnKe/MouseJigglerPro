@@ -32,6 +32,7 @@ Mouse Jiggler Pro, bilgisayarınızın uyku moduna geçmesini veya ekran koruyuc
 | 📥 **System Tray** | Arka planda çalışma + Teams kontrolü |
 | ⌨️ **Klavye Kısayolları** | F9 normal mod, F10 Teams modu |
 | 💾 **Ayar Kaydetme** | Tüm ayarlar otomatik kaydedilir |
+| 🔒 **Tek Instance** | Aynı anda sadece bir uygulama çalışır |
 
 ---
 
@@ -128,12 +129,17 @@ python mouse_jiggler.py
 
 ```
 MouseJigglerPro/
-├── mouse_jiggler.py      # Ana uygulama
-├── requirements.txt      # Python bağımlılıkları
-├── run.bat               # Başlatma scripti
-├── README.md             # Bu dosya
-├── LICENSE               # GPL-3.0 Lisansı
-└── screenshots/          # Ekran görüntüleri
+├── main.py                # Başlatıcı (entry point)
+├── app.py                 # Ana uygulama (MouseJigglerPro sınıfı)
+├── teams_detector.py      # Teams tespit sistemi
+├── constants.py           # Renk, font ve ayar sabitleri
+├── utils.py               # Platform, Windows API, cursor fonksiyonları
+├── mouse_jiggler.py       # Geriye uyumluluk (shim)
+├── requirements.txt       # Python bağımlılıkları
+├── run.bat                # Başlatma scripti
+├── README.md              # Bu dosya
+├── LICENSE                # GPL-3.0 Lisansı
+└── screenshots/           # Ekran görüntüleri
     ├── screenshot.png
     └── screenshot2.png
 ```
@@ -188,6 +194,17 @@ pip install pyautogui
 ```
 pip install pystray pillow
 ```
+
+### Log dosyaları
+Detaylı log dosyaları şu konumda saklanır:
+```
+%USERPROFILE%\.mouse_jiggler_logs\mouse_jiggler.log
+```
+Sorun yaşarsanız bu dosyayı kontrol edin.
+
+### "Uygulama zaten çalışıyor" hatası
+- Görev Yöneticisi'nden `pythonw.exe` veya `Mouse Jiggler` process'ini kapatın
+- Veya `%USERPROFILE%\.mouse_jiggler.lock` dosyasını silin
 
 ---
 

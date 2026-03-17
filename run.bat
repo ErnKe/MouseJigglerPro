@@ -9,5 +9,5 @@ if %errorlevel% neq 0 (
 )
 
 :: Uygulamayı başlat (konsol tamamen gizli)
-start "" /B pythonw mouse_jiggler.py
+start "" /B pythonw main.py
 exit /b
